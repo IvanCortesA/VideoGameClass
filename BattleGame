@@ -19,7 +19,7 @@ public class Main extends Application
   
   @Override
   public void start(Stage GameMenu) {
-    int ManaPotions=5, HealPotions=5, Attack=1, PeaceMeter=0, Health=25, Mana=50;
+    int ManaPotions=5, HealPotions=5, PlayerAttack=1, PeaceMeter=0, Health=25, Mana=50;
     Label label = new Label("Battle Menu"); 
     Menu Actions= new Menu("Actions"), Items= new Menu("Items"), Spells= new Menu("Spells"), Options= new Menu("Options");
     Scene scene;
@@ -28,19 +28,20 @@ public class Main extends Application
     MenuBar mb = new MenuBar();
     //Actions Menu
     mb.getMenus().add(Actions);
-    MenuItem Attack = new MenuItem("Attack");
-    MenuItem Talk = new MenuItem("Talk");
+    MenuItem Attack = new MenuItem("Attack"), Talk = new MenuItem("Talk");
     Actions.getItems().add(Attack);
     Actions.getItems().add(Talk);
     //Items Menu
     mb.getMenus().add(Items);
-    MenuItem Heal=new MenuItem("Heal Potion"), Mana = new MenuItem("Mana Potion");
+    MenuItem Heal=new MenuItem("Heal Potion"), Recharge = new MenuItem("Mana Potion");
     Items.getItems().add(Heal);
-    Items.getItems().add(Mana);
+    Items.getItems().add(Recharge);
     //Spells Menu
     mb.getMenus().add(Spells);
-    //OPtions Menu
+    MenuItem ; //add spells here
+    //Options Menu
     mb.getMenus().add(Options);
+    MenuItem Quit= new MenuItem("Quit");
 
     
     vbox = new VBox(label,mb);
